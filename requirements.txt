@@ -1,5 +1,4 @@
 beautifulsoup4==4.11.1
 colored==1.4.3
 httpx==0.23.0
-pystyle==2.9
 user_agent==0.1.10
