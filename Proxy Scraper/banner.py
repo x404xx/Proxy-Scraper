@@ -1,52 +1,52 @@
 from colored import attr, fg
-from ui import Center, Colors, Colorate
+
+from ui import Center, Colorate, Colors
 
 
-#! Colored code
-yellow = fg("yellow")
-white = fg("white")
-blue = fg(20)
-cyan = fg('cyan')
-green = fg(46)
-red = fg("red")
-purple = fg("purple_1a")
-grey = fg("grey_27")
-org = fg('orange_red_1')
-bold = attr("bold")
-reset = attr("reset")
+class Colored:
+    #! Colored code
+    YELLOW = fg('yellow')
+    WHITE = fg('white')
+    BLUE = fg(20)
+    CYAN = fg('cyan')
+    GREEN = fg(46)
+    RED = fg('red')
+    PURPLE = fg('purple_1a')
+    GREY = fg('grey_27')
+    ORANGE = fg('orange_red_1')
+    BOLD = attr('bold')
+    RESET = attr('reset')
 
 
-logo = r'''
+LOGO = r'''
  █▀▄ █▀▄ ▄▀▄ ▀▄▀ ▀▄▀   ▄▀▀ ▄▀▀ █▀▄ ▄▀▄ █▀▄ ██▀ █▀▄  
  █▀  █▀▄ ▀▄▀ █ █  █    ▄██ ▀▄▄ █▀▄ █▀█ █▀  █▄▄ █▀▄ ▄
 '''
 
-txt = r'BY: ══ᵂʰᵒᴬᴹ!'
-bann = (Colorate.Diagonal(Colors.red_to_yellow, Center.XCenter(logo)))
-text = (Colorate.Horizontal(Colors.black_to_white, Center.XCenter(txt)))
+BANNER = (Colorate.Diagonal(Colors.red_to_yellow, Center.XCenter(LOGO)))
+BY = (Colorate.Horizontal(Colors.black_to_white, Center.XCenter(r'BY: ══ᵂʰᵒᴬᴹ!')))
 
-title = f'''
-{bann}
-    {text}
+TITLE = f'''
+{BANNER}
+    {BY}
 '''
 
-symb = f'{purple}{bold}[:>]{reset}'
-strg = f'{grey}{"»" * 70}{reset}'
-srch = f'\n⏳ {white}Now searching..{reset}\n'
-done = f"\n\t🏁 {org}DONE..!{reset}\n"
+SYMBOL = f'{Colored.PURPLE}{Colored.BOLD}[:>]{Colored.RESET}'
+ARROW = f'{Colored.GREY}{"»" * 70}{Colored.RESET}'
+DONE = f"\n\t🏁 {Colored.ORANGE}DONE..!{Colored.RESET}\n"
 
-proc = f'''
-{purple}{bold}[1] {reset}{blue}{bold}HTTP{reset}
-{purple}{bold}[2] {reset}{blue}{bold}SOCKS{reset}
+PROTOCOL_MENU = f'''
+{Colored.PURPLE}{Colored.BOLD}[1] {Colored.BLUE}{Colored.BOLD}HTTP
+{Colored.PURPLE}{Colored.BOLD}[2] {Colored.BLUE}{Colored.BOLD}SOCKS
 
-{white}📍 Please choose:{reset} '''
+{Colored.WHITE}📍 Please choose:{Colored.RESET} '''
 
-qtt = f'''
-{purple}{bold}[1] {reset}{blue}{bold}30{reset}
-{purple}{bold}[2] {reset}{blue}{bold}50{reset}
-{purple}{bold}[3] {reset}{blue}{bold}100{reset}
-{purple}{bold}[4] {reset}{blue}{bold}200{reset}
-{purple}{bold}[5] {reset}{blue}{bold}300{reset}
-{purple}{bold}[6] {reset}{blue}{bold}500{reset}
+QUANTITY_MENU = f'''
+{Colored.PURPLE}{Colored.BOLD}[1] {Colored.BLUE}{Colored.BOLD}30
+{Colored.PURPLE}{Colored.BOLD}[2] {Colored.BLUE}{Colored.BOLD}50
+{Colored.PURPLE}{Colored.BOLD}[3] {Colored.BLUE}{Colored.BOLD}100
+{Colored.PURPLE}{Colored.BOLD}[4] {Colored.BLUE}{Colored.BOLD}200
+{Colored.PURPLE}{Colored.BOLD}[5] {Colored.BLUE}{Colored.BOLD}300
+{Colored.PURPLE}{Colored.BOLD}[6] {Colored.BLUE}{Colored.BOLD}500
 
-{white}📍 How many:{reset} '''
+{Colored.WHITE}📍 How many:{Colored.RESET} '''
